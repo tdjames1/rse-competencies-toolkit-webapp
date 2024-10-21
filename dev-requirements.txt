@@ -53,7 +53,7 @@ pytest-mock==3.14.0
     # via rse_competencies_toolkit (pyproject.toml)
 pyyaml==6.0.2
     # via pre-commit
-ruff==0.6.8
+ruff==0.7.0
     # via rse_competencies_toolkit (pyproject.toml)
 typing-extensions==4.12.2
     # via mypy
