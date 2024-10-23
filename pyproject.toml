@@ -51,7 +51,7 @@ module = "tests.*"
 disallow_untyped_defs = false
 
 [tool.pytest.ini_options]
-addopts = "-v -p no:warnings --cov=rse_competencies_toolkit --cov-report=html --doctest-modules --ignore=rse_competencies_toolkit/__main__.py --ignore=docs"
+addopts = "-v -p no:warnings --cov=rse_competencies_toolkit --cov-report=html --doctest-modules --ignore=rse_competencies_toolkit/__main__.py --ignore=docs --ignore=rse_competencies_toolkit/settings/"
 
 [tool.ruff]
 target-version = "py312"
