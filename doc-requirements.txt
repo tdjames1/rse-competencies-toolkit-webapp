@@ -4,6 +4,8 @@
 #
 #    pip-compile --extra=doc --output-file=doc-requirements.txt pyproject.toml
 #
+asgiref==3.8.1
+    # via django
 babel==2.16.0
     # via mkdocs-material
 certifi==2024.8.30
@@ -16,8 +18,12 @@ click==8.1.7
     #   mkdocstrings
 colorama==0.4.6
     # via
+    #   click
     #   griffe
+    #   mkdocs
     #   mkdocs-material
+django==5.1.2
+    # via rse_competencies_toolkit (pyproject.toml)
 ghp-import==2.1.0
     # via mkdocs
 griffe==1.5.1
@@ -56,7 +62,9 @@ mkdocs==1.6.1
     #   mkdocstrings
     #   rse_competencies_toolkit (pyproject.toml)
 mkdocs-autorefs==1.2.0
-    # via mkdocstrings
+    # via
+    #   mkdocstrings
+    #   mkdocstrings-python
 mkdocs-gen-files==0.5.0
     # via rse_competencies_toolkit (pyproject.toml)
 mkdocs-get-deps==0.2.0
@@ -107,6 +115,10 @@ requests==2.32.3
     # via mkdocs-material
 six==1.16.0
     # via python-dateutil
+sqlparse==0.5.1
+    # via django
+tzdata==2024.2
+    # via django
 urllib3==2.2.3
     # via requests
 watchdog==5.0.3
