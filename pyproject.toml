@@ -44,6 +44,7 @@ warn_unreachable = true
 warn_unused_ignores = true
 disallow_untyped_defs = true
 exclude = [".venv/", "docs/", "manage.py"]
+plugins = ["mypy_django_plugin.main"]
 
 [[tool.mypy.overrides]]
 module = "tests.*"
@@ -71,3 +72,6 @@ pydocstyle.convention = "google"
     "D100",
     "D104",
 ] # Missing docstring in public module, Missing docstring in public package
+
+[tool.django-stubs]
+django_settings_module = "myproject.settings"
