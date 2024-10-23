@@ -3,7 +3,7 @@ name = "rse_competencies_toolkit"
 version = "0.1.0"
 description = "A Django webapp for hosting the RSE Competencies Toolkit"
 authors = [
-    { name = "Adrian D'Alessandro", email = "a.dalessandro@imperial.ac.uk" }
+    { name = "Adrian D'Alessandro", email = "a.dalessandro@imperial.ac.uk" },
 ]
 requires-python = ">=3.12"
 dependencies = ["django"]
@@ -33,7 +33,9 @@ requires = ["setuptools", "setuptools-scm"]
 build-backend = "setuptools.build_meta"
 
 [tool.setuptools.packages.find]
-exclude = ["htmlcov"] # Exclude the coverage report file from setuptools package finder
+exclude = [
+    "htmlcov",
+] # Exclude the coverage report file from setuptools package finder
 
 [tool.mypy]
 disallow_any_explicit = true
@@ -48,7 +50,7 @@ module = "tests.*"
 disallow_untyped_defs = false
 
 [tool.pytest.ini_options]
-addopts = "-v -p no:warnings --cov=rse_competencies_toolkit --cov-report=html --doctest-modules --ignore=rse_competencies_toolkit/__main__.py"
+addopts = "-v -p no:warnings --cov=rse_competencies_toolkit --cov-report=html --doctest-modules --ignore=rse_competencies_toolkit/__main__.py --ignore=docs"
 
 [tool.ruff]
 target-version = "py312"
@@ -60,9 +62,12 @@ select = [
     "F",   # Pyflakes
     "I",   # isort
     "UP",  # pyupgrade
-    "RUF"  # ruff
+    "RUF", # ruff
 ]
 pydocstyle.convention = "google"
 
 [tool.ruff.lint.per-file-ignores]
-"tests/*" = ["D100", "D104"] # Missing docstring in public module, Missing docstring in public package
+"tests/*" = [
+    "D100",
+    "D104",
+] # Missing docstring in public module, Missing docstring in public package
