@@ -17,6 +17,7 @@ dev = [
     "pytest",
     "pytest-cov",
     "pytest-mock",
+    "django-stubs[compatible-mypy]",
 ]
 doc = [
     "mkdocs",

@@ -18,9 +18,7 @@ click==8.1.7
     #   mkdocstrings
 colorama==0.4.6
     # via
-    #   click
     #   griffe
-    #   mkdocs
     #   mkdocs-material
 django==5.1.2
     # via rse_competencies_toolkit (pyproject.toml)
@@ -116,8 +114,6 @@ requests==2.32.3
 six==1.16.0
     # via python-dateutil
 sqlparse==0.5.1
-    # via django
-tzdata==2024.2
     # via django
 urllib3==2.2.3
     # via requests
