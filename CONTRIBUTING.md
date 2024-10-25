@@ -51,7 +51,7 @@ Before creating bug reports, please check [this list](https://github.com/AdrianD
 Bugs are tracked as [GitHub issues](https://guides.github.com/features/issues/). Explain the problem and include additional details to help maintainers reproduce the problem:
 
 - **Use a clear and descriptive title** for the issue to identify the problem.
-- **Describe the exact steps which reproduce the problem** in as many details as possible. For example, start by explaining how you installed Paricia and what you where trying to do.
+- **Describe the exact steps which reproduce the problem** in as many details as possible. For example, start by explaining how you installed the RSE Competencies Toolkit WebApp and what you were trying to do.
 - **Provide specific examples to demonstrate the steps**. Include links to files or GitHub projects, or copy/pasteable snippets, which you use in those examples. If you're providing snippets in the issue, use [Markdown code blocks](https://help.github.com/articles/markdown-basics/#multiple-lines).
 - **Describe the behavior you observed after following the steps** and point out what exactly is the problem with that behavior.
 - **Explain which behavior you expected to see instead and why.**
