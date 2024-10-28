@@ -25,7 +25,7 @@ django==5.1.2
     #   rse_competencies_toolkit (pyproject.toml)
 django-stubs[compatible-mypy]==5.1.0
     # via rse_competencies_toolkit (pyproject.toml)
-django-stubs-ext==5.1.0
+django-stubs-ext==5.1.1
     # via django-stubs
 filelock==3.16.1
     # via virtualenv
