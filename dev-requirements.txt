@@ -23,7 +23,7 @@ django==5.1.2
     #   django-stubs
     #   django-stubs-ext
     #   rse_competencies_toolkit (pyproject.toml)
-django-stubs[compatible-mypy]==5.1.0
+django-stubs[compatible-mypy]==5.1.1
     # via rse_competencies_toolkit (pyproject.toml)
 django-stubs-ext==5.1.1
     # via django-stubs
