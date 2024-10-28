@@ -83,7 +83,7 @@ virtualenv==20.27.0
     # via pre-commit
 wheel==0.44.0
     # via pip-tools
-whitenoise==6.7.0
+whitenoise==6.8.1
     # via rse_competencies_toolkit (pyproject.toml)
 
 # The following packages are considered to be unsafe in a requirements file:
