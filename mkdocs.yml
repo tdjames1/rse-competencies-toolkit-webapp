@@ -1,5 +1,5 @@
 site_name: RSE Competencies Toolkit
-watch: [rse_competencies_toolkit]
+watch: [main]
 
 theme:
   name: material

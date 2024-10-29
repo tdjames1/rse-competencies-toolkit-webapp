@@ -5,5 +5,9 @@ from django.shortcuts import render
 
 
 def index(request: HttpRequest) -> HttpResponse:
-    """View that renders the index/home page."""
+    """View that renders the index/home page.
+
+    Args:
+      request: A GET request.
+    """
     return render(request=request, template_name="main/index.html")
