@@ -5,9 +5,11 @@ on:
     branches: [main]
   pull_request:
   workflow_dispatch:
+  workflow_call:
 
 jobs:
   test:
+    timeout-minutes: 15
     runs-on: ${{matrix.os}}
     strategy:
       fail-fast: false
