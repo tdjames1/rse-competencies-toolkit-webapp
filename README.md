@@ -5,13 +5,17 @@
 
 # RSE Competencies Toolkit
 
-A Django webapp for hosting the RSE Competencies Toolkit
+A Django webapp for hosting the RSE Competencies Toolkit.
 
-This is a Python application that uses [`pip-tools`] for packaging and dependency management. It also provides [`pre-commit`](https://pre-commit.com/) hooks (for for [ruff](https://pypi.org/project/ruff/) and [`mypy`](https://mypy.readthedocs.io/en/stable/)) and automated tests using [`pytest`](https://pytest.org/) and [GitHub Actions](https://github.com/features/actions). Pre-commit hooks are automatically kept updated with a dedicated GitHub Action, this can be removed and replace with [pre-commit.ci](https://pre-commit.ci) if using an public repo. It was developed by the [Imperial College Research Computing Service](https://www.imperial.ac.uk/admin-services/ict/self-service/research-support/rcs/).
+This Django project uses:
+
+- [`pip-tools`] for packaging and dependency management.
+- [`pre-commit`](https://pre-commit.com/) for various linting, formatting and static type checking. Pre-commit hooks are automatically kept updated with [pre-commit.ci](https://pre-commit.ci).
+- [`pytest`](https://pytest.org/) and [GitHub Actions](https://github.com/features/actions).
 
 [`pip-tools`] is chosen as a lightweight dependency manager that adheres to the [latest standards](https://peps.python.org/pep-0621/) using `pyproject.toml`.
 
-## Usage
+## Installation
 
 To get started:
 
@@ -22,36 +26,47 @@ To get started:
    source .venv/bin/activate # with Powershell on Windows: `.venv\Scripts\Activate.ps1`
    ```
 
-1. Install development requirements and the package in editable mode:
+2. Install development requirements:
 
    ```bash
    pip install -r dev-requirements.txt
-   pip install -e .
    ```
 
-1. (Optionally) install tools for building documentation:
+3. (Optionally) install tools for building documentation:
 
    ```bash
    pip install -r doc-requirements.txt
    ```
 
-1. Install the git hooks:
+4. Install the git hooks:
 
    ```bash
    pre-commit install
    ```
 
-1. Run the main app:
+5. Run the web app:
 
    ```bash
-   python -m rse_competencies_toolkit
+   python manage.py runserver
    ```
 
-1. Run the tests:
+6. Run the tests:
 
    ```bash
    pytest
    ```
+
+### Installation with Docker
+
+The app can be run within a Docker container and a `docker-compose.yml` file is provided to make this easy for development.
+
+Ensure you have [Docker](https://docs.docker.com/desktop/) installed and simply run:
+
+```bash
+docker compose up
+```
+
+The app will be available at <http://127.0.0.1:8000/> <!-- markdown-link-check-disable-line -->
 
 ## Updating Dependencies
 
@@ -68,18 +83,5 @@ To add or remove dependencies:
 To upgrade pinned versions, use the `--upgrade` flag with `pip-compile`.
 
 Versions can be restricted from updating within the `pyproject.toml` using standard python package version specifiers, i.e. `"black<23"` or `"pip-tools!=6.12.2"`
-
-## Customising
-
-All configuration can be customised to your preferences. The key places to make changes
-for this are:
-
-- The `pyproject.toml` file, where you can edit:
-  - The build system (change from setuptools to other packaging tools like [Hatch](https://hatch.pypa.io/) or [flit](https://flit.pypa.io/)).
-  - The python version.
-  - The project dependencies. Extra optional dependencies can be added by adding another list under `[project.optional-dependencies]` (i.e. `doc = ["mkdocs"]`).
-  - The `mypy` and `pytest` configurations.
-- The `.pre-commit-config.yaml` for pre-commit settings.
-- The `.github` directory for all the CI configuration.
 
 [`pip-tools`]: https://pip-tools.readthedocs.io/en/latest/

@@ -1,6 +1,6 @@
 [project]
 name = "rse_competencies_toolkit"
-version = "0.1.0"
+dynamic = ["version"]
 description = "A Django webapp for hosting the RSE Competencies Toolkit"
 authors = [
     { name = "Adrian D'Alessandro", email = "a.dalessandro@imperial.ac.uk" },
