@@ -45,7 +45,7 @@ disallow_any_generics = true
 warn_unreachable = true
 warn_unused_ignores = true
 disallow_untyped_defs = true
-exclude = [".venv/", "docs/", "manage.py"]
+exclude = [".venv/", "docs/", "manage.py", "main/migrations/"]
 plugins = ["mypy_django_plugin.main"]
 
 [[tool.mypy.overrides]]
@@ -57,6 +57,7 @@ addopts = "-v -p no:warnings --cov=rse_competencies_toolkit --cov-report=html --
 DJANGO_SETTINGS_MODULE = "rse_competencies_toolkit.settings"
 
 [tool.ruff]
+exclude = ["main/migrations"]
 target-version = "py312"
 
 [tool.ruff.lint]
