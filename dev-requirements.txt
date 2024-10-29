@@ -60,9 +60,12 @@ pyproject-hooks==1.2.0
 pytest==8.3.3
     # via
     #   pytest-cov
+    #   pytest-django
     #   pytest-mock
     #   rse_competencies_toolkit (pyproject.toml)
 pytest-cov==5.0.0
+    # via rse_competencies_toolkit (pyproject.toml)
+pytest-django==4.9.0
     # via rse_competencies_toolkit (pyproject.toml)
 pytest-mock==3.14.0
     # via rse_competencies_toolkit (pyproject.toml)
