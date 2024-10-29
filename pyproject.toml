@@ -53,7 +53,7 @@ module = "tests.*"
 disallow_untyped_defs = false
 
 [tool.pytest.ini_options]
-addopts = "-v -p no:warnings --cov=rse_competencies_toolkit --cov-report=html --doctest-modules --ignore=rse_competencies_toolkit/__main__.py --ignore=docs --ignore=rse_competencies_toolkit/settings/"
+addopts = "-v -p no:warnings --cov=. --cov-report=html --doctest-modules --ignore=rse_competencies_toolkit/__main__.py --ignore=docs --ignore=rse_competencies_toolkit/settings/"
 DJANGO_SETTINGS_MODULE = "rse_competencies_toolkit.settings"
 FAIL_INVALID_TEMPLATE_VARS = true
 
@@ -80,3 +80,6 @@ pydocstyle.convention = "google"
 
 [tool.django-stubs]
 django_settings_module = "rse_competencies_toolkit.settings"
+
+[tool.coverage.run]
+omit = ["tests/*"]
