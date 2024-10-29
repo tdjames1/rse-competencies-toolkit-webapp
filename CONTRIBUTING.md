@@ -23,11 +23,6 @@ The following is a set of guidelines for contributing to this WebApp, a Django w
 - [Git Commit Messages](#git-commit-messages)
 - [Documentation Styleguide](#documentation-styleguide)
 
-[Developer's setup](#developers-setup)
-
-- [Installing the App](#installing-the-app)
-- [Continuous integration](#continuous-integration)
-
 ## Code of Conduct
 <!-- markdownlint-disable MD042 -->
 This project and everyone participating in it is governed by the [Code of Conduct](). By participating, you are expected to uphold this code. Please report unacceptable behavior to [the repository Administrator]().
@@ -145,15 +140,3 @@ While the prerequisites above must be satisfied prior to having your pull reques
   - Reference classes with `{ClassName}`
   - Reference instance methods with `{ClassName::methodName}`
   - Reference class methods with `{ClassName.methodName}`
-
-## Developer's setup
-
-### Installing the App
-
-If you want to install the App from scratch, follow the steps below:
-
-### Continuous integration
-
-Pre-commit hooks are set up to run code quality checks (isort and black) before committing. To run these locally, you will need to `pip install pre-commit` then `pre-commit install`. Now, quality assurance tools will be run automatically with every commit.
-
-Github workflows are set up to run the pre-commit actions and the tests automatically on every push action.
