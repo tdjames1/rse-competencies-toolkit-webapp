@@ -117,7 +117,7 @@ sqlparse==0.5.1
     # via django
 urllib3==2.2.3
     # via requests
-watchdog==5.0.3
+watchdog==6.0.0
     # via mkdocs
 whitenoise==6.8.1
     # via rse_competencies_toolkit (pyproject.toml)
