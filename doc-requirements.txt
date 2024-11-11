@@ -20,7 +20,7 @@ colorama==0.4.6
     # via
     #   griffe
     #   mkdocs-material
-django==5.1.2
+django==5.1.3
     # via rse_competencies_toolkit (pyproject.toml)
 ghp-import==2.1.0
     # via mkdocs
