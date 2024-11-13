@@ -56,6 +56,12 @@ To get started:
    pytest
    ```
 
+7. Create an admin account to access admin backend:
+
+   ```bash
+   python manage.py createsuperuser
+   ```
+
 ### Installation with Docker
 
 The app can be run within a Docker container and a `docker-compose.yml` file is provided to make this easy for development.
