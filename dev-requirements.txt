@@ -84,7 +84,7 @@ typing-extensions==4.12.2
     #   mypy
 virtualenv==20.27.1
     # via pre-commit
-wheel==0.44.0
+wheel==0.45.0
     # via pip-tools
 whitenoise==6.8.2
     # via rse_competencies_toolkit (pyproject.toml)
