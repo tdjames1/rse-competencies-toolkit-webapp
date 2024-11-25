@@ -73,7 +73,7 @@ pyyaml==6.0.2
     # via pre-commit
 ruff==0.7.3
     # via rse_competencies_toolkit (pyproject.toml)
-sqlparse==0.5.1
+sqlparse==0.5.2
     # via django
 types-pyyaml==6.0.12.20240917
     # via django-stubs
