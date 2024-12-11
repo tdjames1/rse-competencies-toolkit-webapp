@@ -62,13 +62,13 @@ To get started:
 
    then restart it.
 
-7. Run the tests:
+6. Run the tests:
 
    ```bash
    pytest
    ```
 
-8. Create an admin account to access admin backend:
+7. Create an admin account to access admin backend:
 
    ```bash
    python manage.py createsuperuser
