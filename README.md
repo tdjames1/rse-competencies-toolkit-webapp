@@ -44,19 +44,30 @@ To get started:
    pre-commit install
    ```
 
-5. Run the web app:
+5. Run the webapp:
 
    ```bash
    python manage.py runserver
    ```
+   
+   When running the webapp for the first time you may get a warning similar to:
 
-6. Run the tests:
+   `You have 19 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, main, sessions.`
+
+   If this is the case, stop your webapp (with CONTROL/CMD-C) and apply the migrations with:
+
+   ```bash
+   python manage.py migrate
+   ```
+   then restart it.
+
+7. Run the tests:
 
    ```bash
    pytest
    ```
 
-7. Create an admin account to access admin backend:
+8. Create an admin account to access admin backend:
 
    ```bash
    python manage.py createsuperuser
