@@ -79,7 +79,7 @@ mkdocstrings==0.27.0
     # via
     #   mkdocstrings-python
     #   rse_competencies_toolkit (pyproject.toml)
-mkdocstrings-python==1.12.2
+mkdocstrings-python==1.13.0
     # via rse_competencies_toolkit (pyproject.toml)
 packaging==24.2
     # via mkdocs
