@@ -12,9 +12,9 @@ build==1.2.2.post1
     # via pip-tools
 cfgv==3.4.0
     # via pre-commit
-click==8.1.7
+click==8.1.8
     # via pip-tools
-coverage[toml]==7.6.9
+coverage[toml]==7.6.10
     # via pytest-cov
 distlib==0.3.9
     # via virtualenv
@@ -29,7 +29,7 @@ django-stubs-ext==5.1.1
     # via django-stubs
 filelock==3.16.1
     # via virtualenv
-identify==2.6.3
+identify==2.6.5
     # via pre-commit
 iniconfig==2.0.0
     # via pytest
@@ -71,9 +71,9 @@ pytest-mock==3.14.0
     # via rse_competencies_toolkit (pyproject.toml)
 pyyaml==6.0.2
     # via pre-commit
-ruff==0.8.2
+ruff==0.8.4
     # via rse_competencies_toolkit (pyproject.toml)
-sqlparse==0.5.2
+sqlparse==0.5.3
     # via django
 types-pyyaml==6.0.12.20240917
     # via django-stubs
@@ -82,7 +82,7 @@ typing-extensions==4.12.2
     #   django-stubs
     #   django-stubs-ext
     #   mypy
-virtualenv==20.28.0
+virtualenv==20.28.1
     # via pre-commit
 wheel==0.45.1
     # via pip-tools
