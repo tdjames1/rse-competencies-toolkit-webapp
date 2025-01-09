@@ -54,7 +54,7 @@ To get started:
 
    `You have 19 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, main, sessions.`
 
-   If this is the case, stop your webapp (with CONTROL/CMD-C) and apply the migrations with:
+   If this is the case, stop your webapp (with CONTROL-C) and apply the migrations with:
 
    ```bash
    python manage.py migrate
