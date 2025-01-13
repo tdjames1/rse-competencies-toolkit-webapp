@@ -75,7 +75,7 @@ ruff==0.8.4
     # via rse_competencies_toolkit (pyproject.toml)
 sqlparse==0.5.3
     # via django
-types-pyyaml==6.0.12.20240917
+types-pyyaml==6.0.12.20241230
     # via django-stubs
 typing-extensions==4.12.2
     # via
