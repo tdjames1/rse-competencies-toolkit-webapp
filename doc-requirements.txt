@@ -24,7 +24,7 @@ django==5.1.5
     # via rse_competencies_toolkit (pyproject.toml)
 ghp-import==2.1.0
     # via mkdocs
-griffe==1.5.4
+griffe==1.5.5
     # via mkdocstrings-python
 idna==3.10
     # via requests
