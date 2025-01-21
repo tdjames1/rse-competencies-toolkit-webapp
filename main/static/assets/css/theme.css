@@ -16668,7 +16668,7 @@ span.flatpickr-weekday,
   border-color: var(--ar-gray-200) !important;
   box-shadow: -5px 0 0 var(--ar-gray-200), 5px 0 0 var(--ar-gray-200);
 }
-.flatpickr-day.startRange, .flatpickr-day.endRange, .flatpickr-day.endRange.seleced, .flatpickr-day.endRange:hover {
+.flatpickr-day.startRange, .flatpickr-day.endRange, .flatpickr-day.endRange.selected, .flatpickr-day.endRange:hover {
   background-color: var(--ar-primary) !important;
   border-color: var(--ar-primary) !important;
 }

@@ -87,7 +87,7 @@ To make sure your elements are scrollable when JavaScript is disabled, it's impo
 </noscript>
 ```
 
-### :warning: Warning
+### :warning: Warning!
 
 SimpleBar is **not intended to be used on the `body` element!** I don't recommend wrapping your entire web page inside a custom scroll as it will often badly affect the user experience (slower scroll performance compared to the native body scroll, no native scroll behaviours like click on track, etc.). Do it at your own risk! SimpleBar is meant to improve the experience of **internal web page scrolling**; such as a chat box or a small scrolling area. **Please read the [caveats](#5-caveats) section first to be aware of the limitations!**
 
@@ -260,7 +260,7 @@ Simply define in css `overflow-x: hidden` on your element.
 
 ### Notifying the plugin of content changes
 
-#### Note: you shouldn't need to use these functions as SimpleBar takes care of that automatically. This is for advanced usage only
+#### Note: you shouldn't need to use these functions as SimpleBar takes care of that automatically. This is for advanced usage only.
 
 If later on you dynamically modify your content, for instance changing its height or width, or adding or removing content, you should recalculate the scrollbars like so:
 
@@ -334,7 +334,7 @@ IE9 is not supported anymore (because we use `translate3d` to position the scrol
 
 ## 3. Demo
 
-<https://grsmto.github.io/simplebar/>
+https://grsmto.github.io/simplebar/
 
 ## 4. How it works
 

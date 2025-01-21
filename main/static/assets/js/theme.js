@@ -7,7 +7,7 @@
  * @author Createx Studio
  * @version 3.2.0
  */
-
+      
 (function () {
   'use strict';
 
@@ -7796,7 +7796,7 @@
   })();
 
   /**
-   * Toggle that checkes / unchecks all target checkboxes at once
+   * Toggle that checks / unchecks all target checkboxes at once
    */
 
   (() => {

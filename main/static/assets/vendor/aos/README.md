@@ -21,7 +21,6 @@ If you scroll back to top, elements will animate to it's previous state and are 
 ### 🚀 [Demo](http://michalsnik.github.io/aos/)
 
 ### 🌟 Codepen Examples
-
 - [Different build in animations](http://codepen.io/michalsnik/pen/WxNdvq)
 - [With anchor setting in use](http://codepen.io/michalsnik/pen/jrOYVO)
 - [With anchor-placement and different easing](http://codepen.io/michalsnik/pen/EyxoNm)
@@ -30,7 +29,6 @@ If you scroll back to top, elements will animate to it's previous state and are 
 ---
 
 ## ❗ Attention
-
 From version `2.0.0` attributes `aos` are no longer supported, always use `data-aos`.
 
 ## ⚙ Setup
@@ -50,6 +48,7 @@ From version `2.0.0` attributes `aos` are no longer supported, always use `data-
     ```
 
 - Direct download -> [click here](https://github.com/michalsnik/aos/archive/master.zip)
+
 
 ### Link styles
 
@@ -119,30 +118,28 @@ Notice that double `[data-aos][data-aos]` - it's not a mistake, it is a trick, t
 `bottom-top` means that animation will be triggered when `bottom` of an element reach `top` of the window, and so on.
 Down below you can find list of all anchor-placement options.
 
-#### Examples
+#### Examples:
 
 ```html
   <div data-aos="fade-zoom-in" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600">
 ```
-
 ```html
   <div data-aos="flip-left" data-aos-delay="100" data-aos-anchor=".example-selector">
 ```
-
 ```html
   <div data-aos="fade-up" data-aos-anchor-placement="top-center">
 ```
+
 
 #### API
 
 AOS object is exposed as a global variable, for now there are three methods available:
 
-- `init` - initialize AOS
-- `refresh` - recalculate all offsets and positions of elements (called on window resize)
-- `refreshHard` - reinit array with AOS elements and trigger `refresh` (called on DOM changes that are related to `aos` elements)
+  * `init` - initialize AOS
+  * `refresh` - recalculate all offsets and positions of elements (called on window resize)
+  * `refreshHard` - reinit array with AOS elements and trigger `refresh` (called on DOM changes that are related to `aos` elements)
 
 Example execution:
-
 ```javascript
   AOS.refresh();
 ```
@@ -219,81 +216,83 @@ If you don't want to initialize AOS on `DOMContentLoaded` event, you can pass yo
 
 **Important note:** If you set `startEvent: 'load'` it will add event listener on `window` instead of `document`.
 
+
 ### 👻 Animations
 
 There are serveral predefined animations you can use already:
 
-- Fade animations:
-  - fade
-  - fade-up
-  - fade-down
-  - fade-left
-  - fade-right
-  - fade-up-right
-  - fade-up-left
-  - fade-down-right
-  - fade-down-left
+  * Fade animations:
+    * fade
+    * fade-up
+    * fade-down
+    * fade-left
+    * fade-right
+    * fade-up-right
+    * fade-up-left
+    * fade-down-right
+    * fade-down-left
 
-- Flip animations:
-  - flip-up
-  - flip-down
-  - flip-left
-  - flip-right
+  * Flip animations:
+    * flip-up
+    * flip-down
+    * flip-left
+    * flip-right
 
-- Slide animations:
-  - slide-up
-  - slide-down
-  - slide-left
-  - slide-right
+  * Slide animations:
+    * slide-up
+    * slide-down
+    * slide-left
+    * slide-right
 
-- Zoom animations:
-  - zoom-in
-  - zoom-in-up
-  - zoom-in-down
-  - zoom-in-left
-  - zoom-in-right
-  - zoom-out
-  - zoom-out-up
-  - zoom-out-down
-  - zoom-out-left
-  - zoom-out-right
+  * Zoom animations:
+    * zoom-in
+    * zoom-in-up
+    * zoom-in-down
+    * zoom-in-left
+    * zoom-in-right
+    * zoom-out
+    * zoom-out-up
+    * zoom-out-down
+    * zoom-out-left
+    * zoom-out-right
 
-### Anchor placement
+### Anchor placement:
 
-- top-bottom
-- top-center
-- top-top
-- center-bottom
-- center-center
-- center-top
-- bottom-bottom
-- bottom-center
-- bottom-top
+  * top-bottom
+  * top-center
+  * top-top
+  * center-bottom
+  * center-center
+  * center-top
+  * bottom-bottom
+  * bottom-center
+  * bottom-top
 
-### Easing functions
+
+### Easing functions:
 
 You can choose one of these timing function to animate elements nicely:
 
-- linear
-- ease
-- ease-in
-- ease-out
-- ease-in-out
-- ease-in-back
-- ease-out-back
-- ease-in-out-back
-- ease-in-sine
-- ease-out-sine
-- ease-in-out-sine
-- ease-in-quad
-- ease-out-quad
-- ease-in-out-quad
-- ease-in-cubic
-- ease-out-cubic
-- ease-in-out-cubic
-- ease-in-quart
-- ease-out-quart
-- ease-in-out-quart
+  * linear
+  * ease
+  * ease-in
+  * ease-out
+  * ease-in-out
+  * ease-in-back
+  * ease-out-back
+  * ease-in-out-back
+  * ease-in-sine
+  * ease-out-sine
+  * ease-in-out-sine
+  * ease-in-quad
+  * ease-out-quad
+  * ease-in-out-quad
+  * ease-in-cubic
+  * ease-out-cubic
+  * ease-in-out-cubic
+  * ease-in-quart
+  * ease-out-quart
+  * ease-in-out-quart
 
 ## ✌️ [Contributing](CONTRIBUTING.md)
 

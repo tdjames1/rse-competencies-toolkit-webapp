@@ -302,6 +302,7 @@ imagesLoaded.makeJQueryPlugin( $ );
 $('#container').imagesLoaded( function() {...});
 ```
 
+
 ## Browser support
 
 + Chrome 49+
