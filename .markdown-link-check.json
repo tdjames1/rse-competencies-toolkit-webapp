@@ -1,5 +1,0 @@
-{
-    "ignoreFiles": [
-        "**/vendor/**/*.md"
-    ]
-}
