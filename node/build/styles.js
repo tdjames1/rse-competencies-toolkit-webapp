@@ -12,8 +12,8 @@ const output = process.argv[2] || 'expanded' // Default to expanded if not provi
 
 function runScript(alias, script) {
   try {
-    const stdout = execSync(script)
-    log.success(alias)
+    const stdout = execSync(script).toString()
+    log.success(`${alias}: ${stdout.trim()}`)
   } catch (error) {
     log.error('', `Task ${alias} hasn't been completed! ${error.stdout.toString()}`)
   }
