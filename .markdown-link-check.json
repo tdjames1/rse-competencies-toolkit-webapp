@@ -1,7 +1,5 @@
 {
-    "ignorePatterns": [
-        {
-            "pattern": "/main/static/assets/vendor/"
-        }
+    "ignoreFiles": [
+        "**/vendor/**/*.md"
     ]
 }
