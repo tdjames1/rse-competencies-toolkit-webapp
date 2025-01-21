@@ -18,7 +18,4 @@ jobs:
         with:
           use-quiet-mode: yes
           use-verbose-mode: yes
-          folder-path: .
-      - name: Exclude vendor directory
-        run: |
-          find . -name "*.md" ! -path "./main/static/assets/vendor/*" -exec markdown-link-check {} -q -v \;
+          config-file: .mlc_config.json

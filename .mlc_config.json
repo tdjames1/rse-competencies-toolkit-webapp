@@ -1,0 +1,40 @@
+{
+    "ignorePatterns": [
+        {
+            "pattern": "http://localhost:8080/webpack-dev-server/"
+        },
+        {
+            "pattern": "https://s32.postimg.org/ktvt59hol/aos_header.png"
+        },
+        {
+            "pattern": "http://codepen.io/michalsnik/pen/WxNdvq"
+        },
+        {
+            "pattern": "http://codepen.io/michalsnik/pen/jrOYVO"
+        },
+        {
+            "pattern": "http://codepen.io/michalsnik/pen/EyxoNm"
+        },
+        {
+            "pattern": "http://codepen.io/michalsnik/pen/WxvNvE"
+        },
+        {
+            "pattern": "https://github.com/Grsmto/simplebar/blob/master/examples/vue/src/App.vue"
+        },
+        {
+            "pattern": "https://polyfill.io/"
+        },
+        {
+            "pattern": "https://codepen.io/desandro/pen/pjVMPB"
+        },
+        {
+            "pattern": "https://codepen.io/desandro/pen/avKooW"
+        },
+        {
+            "pattern": "https://codepen.io/desandro/pen/avKoZL"
+        },
+        {
+            "pattern": "https://codepen.io/desandro/pen/vNrBGz"
+        }
+    ]
+}
