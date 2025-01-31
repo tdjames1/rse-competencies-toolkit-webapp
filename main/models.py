@@ -48,7 +48,21 @@ class Skill(models.Model):
 
     name = models.CharField(max_length=50)
     description = models.CharField(max_length=100)
-    category = models.ForeignKey(Category, on_delete=models.CASCADE)
+    category = models.ForeignKey(
+        Category,
+        on_delete=models.CASCADE,
+    )
+
+    def __str__(self) -> str:
+        """Return the name of the skill."""
+        return self.name
+
+    def clean(self) -> None:
+        """Validate the skill instance."""
+        if self.category.parent_category is None:
+            raise ValidationError(
+                {"category": _("The category cannot be a top-level category.")}
+            )
 
 
 class SkillLevel(models.Model):
