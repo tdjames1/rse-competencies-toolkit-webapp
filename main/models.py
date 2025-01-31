@@ -33,7 +33,7 @@ class Category(models.Model):
             raise ValidationError(
                 {"parent_category": _("A category cannot be its own parent.")}
             )
-        if self.parent_category and self.category_set.all().exists():
+        if self.parent_category and self.pk and self.category_set.all().exists():
             raise ValidationError(
                 {
                     "parent_category": _(
