@@ -8,7 +8,7 @@ asgiref==3.8.1
     # via django
 babel==2.16.0
     # via mkdocs-material
-certifi==2024.12.14
+certifi==2025.1.31
     # via requests
 charset-normalizer==3.4.0
     # via requests
