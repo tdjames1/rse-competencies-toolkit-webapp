@@ -8,8 +8,9 @@ authors = [
 requires-python = ">=3.12"
 dependencies = [
     "django",
+    "django-bootstrap5",
+    "django-stubs-ext",
     "whitenoise",
-    "django-bootstrap5"
 ]
 
 [project.optional-dependencies]
