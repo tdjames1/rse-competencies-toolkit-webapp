@@ -20,16 +20,19 @@ distlib==0.3.9
     # via virtualenv
 django==5.1.5
     # via
+    #   django-bootstrap5
     #   django-stubs
     #   django-stubs-ext
     #   rse_competencies_toolkit (pyproject.toml)
+django-bootstrap5==24.3
+    # via rse_competencies_toolkit (pyproject.toml)
 django-stubs[compatible-mypy]==5.1.2
     # via rse_competencies_toolkit (pyproject.toml)
-django-stubs-ext==5.1.2
+django-stubs-ext==5.1.3
     # via django-stubs
-filelock==3.16.1
+filelock==3.17.0
     # via virtualenv
-identify==2.6.5
+identify==2.6.6
     # via pre-commit
 iniconfig==2.0.0
     # via pytest
@@ -51,7 +54,7 @@ platformdirs==4.3.6
     # via virtualenv
 pluggy==1.5.0
     # via pytest
-pre-commit==4.0.1
+pre-commit==4.1.0
     # via rse_competencies_toolkit (pyproject.toml)
 pyproject-hooks==1.2.0
     # via
@@ -71,7 +74,7 @@ pytest-mock==3.14.0
     # via rse_competencies_toolkit (pyproject.toml)
 pyyaml==6.0.2
     # via pre-commit
-ruff==0.9.1
+ruff==0.9.6
     # via rse_competencies_toolkit (pyproject.toml)
 sqlparse==0.5.3
     # via django
@@ -82,7 +85,7 @@ typing-extensions==4.12.2
     #   django-stubs
     #   django-stubs-ext
     #   mypy
-virtualenv==20.28.1
+virtualenv==20.29.1
     # via pre-commit
 wheel==0.45.1
     # via pip-tools
