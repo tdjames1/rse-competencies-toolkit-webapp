@@ -131,7 +131,7 @@ Key commands available in the `package.json`:
 ***Build All Assets:*** To build all styles, scripts, icon fonts, and vendor files, run:
 
 ```bash
-npm build
+npm run build
 ```
 
 ***Build Expanded Styles:*** To build expanded (human-readable) css files:
