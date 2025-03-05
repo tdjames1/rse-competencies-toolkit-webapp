@@ -124,6 +124,8 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 
 # Custom settings
+
+# List main app first so that custom templates override default admin views
 INSTALLED_APPS = ["main", *INSTALLED_APPS]
 
 
