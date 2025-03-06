@@ -31,13 +31,13 @@ class TestRegistrationViews(TestCase):
         )
 
     def test_password_reset(self):
-        """Test the privacy page view."""
+        """Test the password_reset_form view."""
         with assertTemplateUsed(template_name="registration/password_reset_form.html"):
             response = self.client.get("/accounts/password_reset/")
         self.assertEqual(response.status_code, 200)
 
     def test_password_reset_submit(self):
-        """Test the privacy page view."""
+        """Tests the templates are used when a password reset email is requested."""
         response = self.client.post(
             path="/accounts/password_reset/", data={"email": self.test_user.email}
         )
