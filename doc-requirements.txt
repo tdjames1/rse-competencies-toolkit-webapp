@@ -20,7 +20,7 @@ colorama==0.4.6
     # via
     #   griffe
     #   mkdocs-material
-django==5.1.5
+django==5.1.7
     # via
     #   django-bootstrap5
     #   django-stubs-ext
