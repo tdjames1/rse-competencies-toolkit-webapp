@@ -30,7 +30,6 @@ ALLOWED_HOSTS: list[str]
 # Application definition
 
 INSTALLED_APPS = [
-    "main",  # main must go before the defaults to override the default admin views
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -124,7 +123,16 @@ STATIC_URL = "static/"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 
+# Custom settings
+
+# List main app first so that custom templates override default admin views
+INSTALLED_APPS = ["main", *INSTALLED_APPS]
+
+
 MIDDLEWARE.insert(1, "whitenoise.middleware.WhiteNoiseMiddleware")
 STATIC_ROOT = BASE_DIR / "staticfiles"
 
 AUTH_USER_MODEL = "main.User"
+
+LOGIN_REDIRECT_URL = "/"
+EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
