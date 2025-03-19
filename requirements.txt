@@ -25,5 +25,5 @@ starkbank-ecdsa==2.2.0
     # via sendgrid
 typing-extensions==4.12.2
     # via django-stubs-ext
-whitenoise==6.8.2
+whitenoise==6.9.0
     # via rse_competencies_toolkit (pyproject.toml)
