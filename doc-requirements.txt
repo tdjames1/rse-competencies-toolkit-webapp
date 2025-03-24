@@ -74,7 +74,7 @@ mkdocs-gen-files==0.5.0
     # via rse_competencies_toolkit (pyproject.toml)
 mkdocs-get-deps==0.2.0
     # via mkdocs
-mkdocs-literate-nav==0.6.1
+mkdocs-literate-nav==0.6.2
     # via rse_competencies_toolkit (pyproject.toml)
 mkdocs-material==9.6.9
     # via rse_competencies_toolkit (pyproject.toml)
