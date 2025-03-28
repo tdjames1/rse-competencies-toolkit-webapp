@@ -21,7 +21,7 @@ class TestIndex(TemplateOkMixin):
 
 
 class TestPrivacy(TemplateOkMixin):
-    """Test suite for the index view."""
+    """Test suite for the privacy view."""
 
     _template_name = "main/privacy.html"
 
