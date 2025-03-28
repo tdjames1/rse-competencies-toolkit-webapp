@@ -7,8 +7,7 @@ from pytest_django.asserts import assertTemplateUsed
 
 
 class TemplateOkMixin:
-    """Mixin for tests that require a user to be logged in.
-
+    """Mixin for tests that verify the correct template usage.
     Note: Using this requires the test class to define:
         - A `_get_url` method
         - A `_template_name` variable

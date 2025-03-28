@@ -80,9 +80,8 @@ class TestPasswordReset(TemplateOkMixin):
 
         assert len(mail.outbox) == 1
         generated_email = mail.outbox[0]
-        assert generated_email.subject, expected_email_subject.strip()
-        assert generated_email.body.strip(), expected_email_content.strip()
-
+        assert generated_email.subject == expected_email_subject.strip()
+        assert generated_email.body.strip() == expected_email_content.strip()
         # Now we can use the token to get the password change form
         response = client.get(password_reset_url)
         assert response.status_code == HTTPStatus.FOUND
