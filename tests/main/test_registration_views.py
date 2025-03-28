@@ -5,7 +5,9 @@ from http import HTTPStatus
 import pytest
 from django.core import mail
 from django.urls import reverse
-from pytest_django.asserts import assertContains, assertNotContains, assertTemplateUsed
+from pytest_django.asserts import assertContains, assertNotContains
+
+from .view_utils import TemplateOkMixin
 
 
 @pytest.fixture
@@ -35,17 +37,13 @@ def set_password_url(client, password_reset_uid_and_token, password_reset_url):
     )
 
 
-class TestPasswordReset:
+class TestPasswordReset(TemplateOkMixin):
     """Test suite for the password_reset views."""
+
+    _template_name = "registration/password_reset_form.html"
 
     def _get_url(self):
         return reverse("password_reset")
-
-    def test_get(self, client):
-        """Test the view GET request uses the correct template."""
-        with assertTemplateUsed(template_name="registration/password_reset_form.html"):
-            response = client.get(self._get_url())
-        assert response.status_code == HTTPStatus.OK
 
     def test_post(self, client, user):
         """Test the view POST request redirects correctly."""
@@ -91,60 +89,37 @@ class TestPasswordReset:
         assert response.url == set_password_url
 
 
-class TestPasswordResetDone:
+class TestPasswordResetDone(TemplateOkMixin):
     """Test suite for the password_reset_done views."""
 
-    def test_password_reset_done(self, client):
-        """Test the password_reset_done view."""
-        with assertTemplateUsed(template_name="registration/password_reset_done.html"):
-            response = client.get("/accounts/password_reset/done/")
-        assert response.status_code == HTTPStatus.OK
-
-
-class TestPasswordResetConfirm:
-    """Test suite for the password_reset_confirm views."""
-
-    def test_get(self, client, set_password_url):
-        """Test the view GET request uses the correct template."""
-        # Expect out custom error page if an incorrect token/uid is used
-        with assertTemplateUsed(
-            template_name="registration/password_reset_confirm.html"
-        ):
-            response = client.get(
-                reverse(
-                    "password_reset_confirm",
-                    kwargs={"token": "some", "uidb64": "thing"},
-                )
-            )
-        assert response.status_code == HTTPStatus.OK
-        assertContains(response, "Password reset failed")
-
-        # Expect our custom password_reset_confirm page
-        with assertTemplateUsed(
-            template_name="registration/password_reset_confirm.html"
-        ):
-            response = client.get(set_password_url)
-        assert response.status_code == HTTPStatus.OK
-        assertNotContains(response, "Password reset failed")
-
-
-class TestPasswordResetComplete:
-    """Test suite for the password_reset_complete views."""
+    _template_name = "registration/password_reset_done.html"
 
     def _get_url(self):
-        return reverse("password_reset_complete")
+        return reverse("password_reset_done")
 
-    def test_get(self, client):
-        """Test the view GET request uses the correct template."""
-        # Expect our custom password_reset_complete page
-        with assertTemplateUsed(
-            template_name="registration/password_reset_complete.html"
-        ):
-            response = client.get(self._get_url())
-        assert response.status_code == HTTPStatus.OK
 
-    def test_password_reset_complete(self, client, set_password_url):
-        """Test the password_reset_complete view."""
+class TestPasswordResetConfirm(TemplateOkMixin):
+    """Test suite for the password_reset_confirm views."""
+
+    _template_name = "registration/password_reset_confirm.html"
+
+    def _get_url(self):
+        return reverse(
+            "password_reset_confirm", kwargs={"token": "some", "uidb64": "thing"}
+        )
+
+    def test_get(self, client, set_password_url):
+        """Test the view GET request fails and succeeds depending on the token."""
+        # Expect our custom error page if an incorrect token/uid is used
+        response = client.get(self._get_url())
+        assertContains(response, "<h1>Password reset failed</h1>")
+
+        # Expect our custom password_reset_confirm page
+        response = client.get(set_password_url)
+        assertNotContains(response, "Password reset failed")
+
+    def test_post(self, client, set_password_url):
+        """Test the POST request."""
         # Set the new password
         # Note that this needs to be sufficiently strong to be accepted
         response = client.post(
@@ -155,4 +130,13 @@ class TestPasswordResetComplete:
             },
         )
         assert response.status_code == HTTPStatus.FOUND
-        assert response.url == self._get_url()
+        assert response.url == reverse("password_reset_complete")
+
+
+class TestPasswordResetComplete(TemplateOkMixin):
+    """Test suite for the password_reset_complete views."""
+
+    _template_name = "registration/password_reset_complete.html"
+
+    def _get_url(self):
+        return reverse("password_reset_complete")
