@@ -87,7 +87,7 @@ typing-extensions==4.12.2
     #   django-stubs
     #   django-stubs-ext
     #   mypy
-virtualenv==20.29.3
+virtualenv==20.30.0
     # via pre-commit
 wheel==0.45.1
     # via pip-tools
