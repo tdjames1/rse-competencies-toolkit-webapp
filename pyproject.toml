@@ -79,10 +79,7 @@ select = [
 pydocstyle.convention = "google"
 
 [tool.ruff.lint.per-file-ignores]
-"tests/*" = [
-    "D100",
-    "D104",
-] # Missing docstring in public module, Missing docstring in public package
+"tests/*" = ["D104"] # Missing docstring in public package
 
 [tool.django-stubs]
 django_settings_module = "rse_competencies_toolkit.settings"
