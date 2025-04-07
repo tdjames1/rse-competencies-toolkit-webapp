@@ -6,7 +6,13 @@ authors = [
     { name = "Adrian D'Alessandro", email = "a.dalessandro@imperial.ac.uk" },
 ]
 requires-python = ">=3.12"
-dependencies = ["django", "django-bootstrap5", "django-stubs-ext", "whitenoise"]
+dependencies = [
+    "django",
+    "django-bootstrap5",
+    "django-stubs-ext",
+    "whitenoise",
+    "sendgrid",
+]
 
 [project.optional-dependencies]
 dev = [
