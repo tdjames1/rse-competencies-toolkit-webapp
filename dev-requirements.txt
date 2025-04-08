@@ -70,7 +70,7 @@ pytest==8.3.5
     #   rse_competencies_toolkit (pyproject.toml)
 pytest-cov==6.0.0
     # via rse_competencies_toolkit (pyproject.toml)
-pytest-django==4.10.0
+pytest-django==4.11.1
     # via rse_competencies_toolkit (pyproject.toml)
 pytest-mock==3.14.0
     # via rse_competencies_toolkit (pyproject.toml)
