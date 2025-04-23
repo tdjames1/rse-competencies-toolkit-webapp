@@ -7,7 +7,7 @@ from django.core import mail
 from django.urls import reverse
 from pytest_django.asserts import assertContains, assertNotContains
 
-from .view_utils import TemplateOkMixin
+from .view_utils import LoginRequiredMixin, TemplateOkMixin
 
 
 @pytest.fixture
@@ -139,3 +139,45 @@ class TestPasswordResetComplete(TemplateOkMixin):
 
     def _get_url(self):
         return reverse("password_reset_complete")
+
+
+class TestPasswordChange(LoginRequiredMixin, TemplateOkMixin):
+    """Test suite for the password_change views."""
+
+    _template_name = "registration/password_change_form.html"
+
+    def _get_url(self):
+        return reverse("password_change")
+
+    def test_get_unauthorised(self, client):
+        """Test the view GET request redirects correctly the user is not logged in."""
+        # Expect a redirect to the login page
+        response = client.get(self._get_url())
+        assert response.status_code == HTTPStatus.FOUND
+        assert response.url == reverse("login") + "?next=" + reverse("password_change")
+
+    # This is disabled as I have been unable to get the user login
+    # working within the tests. This will be needed to check our
+    # view template for password_change_done is used
+    # def test_post(self, client, user):
+    #     """Test the POST request."""
+    #     # Set the new password
+    #     # Note that this needs to be sufficiently strong to be accepted
+    #     login_response = client.post(
+    #         reverse("login"),
+    #         data={
+    #             "username": user.username,
+    #             "password": user.password,
+    #         },
+    #     )
+    #     assert login_response.status_code == HTTPStatus.FOUND
+    #     response = client.post(
+    #         self._get_url(),
+    #         data={
+    #             "old_password": user.password,
+    #             "new_password1": "bkjbkjwdnwqkldnwkjfdnqlkecf",
+    #             "new_password2": "bkjbkjwdnwqkldnwkjfdnqlkecf",
+    #         },
+    #     )
+    #     assert response.status_code == HTTPStatus.FOUND
+    #     assert response.url == reverse("password_change_done")
