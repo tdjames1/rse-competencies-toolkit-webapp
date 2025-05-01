@@ -18,7 +18,7 @@ coverage[toml]==7.8.0
     # via pytest-cov
 distlib==0.3.9
     # via virtualenv
-django==5.1.7
+django==5.1.8
     # via
     #   django-bootstrap5
     #   django-stubs
@@ -68,9 +68,9 @@ pytest==8.3.5
     #   pytest-django
     #   pytest-mock
     #   rse_competencies_toolkit (pyproject.toml)
-pytest-cov==6.0.0
+pytest-cov==6.1.1
     # via rse_competencies_toolkit (pyproject.toml)
-pytest-django==4.10.0
+pytest-django==4.11.1
     # via rse_competencies_toolkit (pyproject.toml)
 pytest-mock==3.14.0
     # via rse_competencies_toolkit (pyproject.toml)
