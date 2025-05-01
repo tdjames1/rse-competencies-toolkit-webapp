@@ -7,7 +7,7 @@ from django.core import mail
 from django.urls import reverse
 from pytest_django.asserts import assertContains, assertNotContains
 
-from .view_utils import TemplateOkMixin
+from .view_utils import LoginRequiredMixin, TemplateOkMixin
 
 
 @pytest.fixture
@@ -139,3 +139,12 @@ class TestPasswordResetComplete(TemplateOkMixin):
 
     def _get_url(self):
         return reverse("password_reset_complete")
+
+
+class TestPasswordChangeForm(LoginRequiredMixin, TemplateOkMixin):
+    """Test suite for the password_change views."""
+
+    _template_name = "registration/password_change_form.html"
+
+    def _get_url(self):
+        return reverse("password_change")
