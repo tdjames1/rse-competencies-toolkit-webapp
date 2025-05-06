@@ -10,7 +10,7 @@ babel==2.17.0
     # via mkdocs-material
 certifi==2025.1.31
     # via requests
-charset-normalizer==3.4.1
+charset-normalizer==3.4.2
     # via requests
 click==8.1.8
     # via
@@ -100,7 +100,7 @@ platformdirs==4.3.7
     #   mkdocstrings
 pygments==2.19.1
     # via mkdocs-material
-pymdown-extensions==10.14.3
+pymdown-extensions==10.15
     # via
     #   mkdocs-material
     #   mkdocstrings
