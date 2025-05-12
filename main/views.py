@@ -1,7 +1,8 @@
 """Views for the main app."""
 
 from django.http import HttpRequest, HttpResponse
-from django.shortcuts import redirect, render
+from django.shortcuts import render
+from django.views.generic.edit import FormView
 
 from .forms import CustomUserCreationForm
 
@@ -24,17 +25,15 @@ def privacy(request: HttpRequest) -> HttpResponse:
     return render(request=request, template_name="main/privacy.html")
 
 
-def register(request: HttpRequest) -> HttpResponse:
-    """View that renders the user registration form page.
+class CreateUserView(FormView[CustomUserCreationForm]):
+    """View that renders the user creation form page."""
 
-    Args:
-      request: An HTTP request.
-    """
-    if request.method == "POST":
-        user_form = CustomUserCreationForm(data=request.POST)
-        if user_form.is_valid():
-            user_form.save()
-            return redirect("login")
-    else:
-        user_form = CustomUserCreationForm()
-    return render(request, "registration/create_user.html", {"user_form": user_form})
+    template_name = "registration/create_user.html"
+    form_class = CustomUserCreationForm
+    success_url = "/accounts/login"
+
+    def form_valid(self, form: CustomUserCreationForm) -> HttpResponse:
+        """Method called when valid form data has been POSTed."""
+        if form.is_valid():
+            form.save()
+        return super().form_valid(form)

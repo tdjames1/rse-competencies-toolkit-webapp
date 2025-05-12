@@ -4,9 +4,9 @@
 
 <section class="container pt-5 mt-5">
 
-{% if user_form.errors %}
+{% if form.errors %}
 <p>There was a problem submitting the form. Please try again.</p>
-<p>{{ user_form.errors }}</p>
+<p>{{ form.errors }}</p>
 {% endif %}
 
 
@@ -15,21 +15,20 @@
 
 <table>
 <tr>
-    <td>{{ user_form.username.label_tag }}</td>
-    <td>{{ user_form.username }}</td>
+    <td>{{ form.username.label_tag }}</td>
+    <td>{{ form.username }}</td>
 </tr>
 <tr>
-    <td>{{ user_form.password1.label_tag }}</td>
-    <td>{{ user_form.password1 }}</td>
+    <td>{{ form.password1.label_tag }}</td>
+    <td>{{ form.password1 }}</td>
 </tr>
 <tr>
-    <td>{{ user_form.password2.label_tag }}</td>
-    <td>{{ user_form.password2 }}</td>
+    <td>{{ form.password2.label_tag }}</td>
+    <td>{{ form.password2 }}</td>
 </tr>
 </table>
 
 <input type="submit" value="Submit">
-<input type="hidden" name="next" value="{{ next }}">
 </form>
 
 <p>Already registered? <a href="{% url 'login' %}">Login</a></p>

@@ -5,7 +5,7 @@
 <section class="container pt-5 mt-5">
 
 {% if form.errors %}
-<p>Your username and password didn't match. Please try again.</p>
+<p>Your username and password didn't match. Please try again or <a href="{% url 'register' %}">register</a> if you haven't already got an account.</p>
 {% endif %}
 
 {% if next %}
