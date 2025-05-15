@@ -16,6 +16,14 @@ This Django project uses:
 
 [`pip-tools`] is chosen as a lightweight dependency manager that adheres to the [latest standards](https://peps.python.org/pep-0621/) using `pyproject.toml`.
 
+## Current Status
+
+- [x] Initial research
+- [ ] Initial development <-- We are here
+- [ ] Minimum viable product
+- [ ] Alpha release
+- [ ] Feature-complete release
+
 ## Installation
 
 To get started:
