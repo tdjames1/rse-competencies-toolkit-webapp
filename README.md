@@ -23,7 +23,7 @@ This Django project uses:
 ## Current Status
 
 - [x] Initial research
-- [ ] Initial development <-- We are here
+- [x] Initial development <-- We are here
 - [ ] Minimum viable product
 - [ ] Alpha release
 - [ ] Feature-complete release
