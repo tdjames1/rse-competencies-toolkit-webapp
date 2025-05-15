@@ -8,9 +8,9 @@
 
 A Django webapp implementing the [DIRECT competencies framework](https://github.com/direct-framework/digital-research-competencies-framework/) as a website that can:
 
-- Show descriptions of all the skills.
-- Display and link the professional development resources curated for each skill.
+- Allow broswing and show descriptions of all the skills.
 - Allow people to score their own skills and view their skill wheels.
+- Display and link the professional development resources curated for each skill.
 
 This Django project uses:
 
