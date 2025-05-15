@@ -6,7 +6,7 @@
 
 # DIRECT Framework Webapp
 
-A Django webapp implementing the [DIRECT competencies framework](DIgital Research CompeTencies (DIRECT) Framework) as a website that can:
+A Django webapp implementing the [DIRECT competencies framework](https://github.com/direct-framework/digital-research-competencies-framework/) as a website that can:
 
 - Show descriptions of all the skills.
 - Display and link the professional development resources curated for each skill.
