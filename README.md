@@ -1,12 +1,16 @@
 <!-- markdownlint-disable MD041 -->
 
-[![GitHub](https://img.shields.io/github/license/AdrianDAlessandro/rse-competencies-toolkit-webapp)](https://raw.githubusercontent.com/AdrianDAlessandro/rse-competencies-toolkit-webapp/main/LICENSE)
-[![Test and build](https://github.com/AdrianDAlessandro/rse-competencies-toolkit-webapp/actions/workflows/ci.yml/badge.svg)](https://github.com/AdrianDAlessandro/rse-competencies-toolkit-webapp/actions/workflows/ci.yml)
-[![codecov](https://codecov.io/gh/AdrianDAlessandro/rse-competencies-toolkit-webapp/graph/badge.svg?token=56K64XN243)](https://codecov.io/gh/AdrianDAlessandro/rse-competencies-toolkit-webapp)
+[![GitHub](https://img.shields.io/github/license/direct-framework/direct-webapp)](https://raw.githubusercontent.com/direct-framework/direct-webapp/main/LICENSE)
+[![Test and build](https://github.com/direct-framework/direct-webapp/actions/workflows/ci.yml/badge.svg)](https://github.com/direct-framework/direct-webapp/actions/workflows/ci.yml)
+[![codecov](https://codecov.io/gh/direct-framework/direct-webapp/graph/badge.svg?token=56K64XN243)](https://codecov.io/gh/direct-framework/direct-webapp)
 
-# RSE Competencies Toolkit
+# DIRECT Framework Webapp
 
-A Django webapp for hosting the RSE Competencies Toolkit.
+A Django webapp implementing the [DIRECT competencies framework](https://github.com/direct-framework/digital-research-competencies-framework/) as a website that can:
+
+- Allow browsing of all the skills.
+- Allow people to score their own skills and view their skill wheels.
+- Display and link the professional development resources curated for each skill.
 
 This Django project uses:
 
@@ -15,6 +19,14 @@ This Django project uses:
 - [`pytest`](https://pytest.org/) and [GitHub Actions](https://github.com/features/actions).
 
 [`pip-tools`] is chosen as a lightweight dependency manager that adheres to the [latest standards](https://peps.python.org/pep-0621/) using `pyproject.toml`.
+
+## Current Status
+
+- [x] Initial research
+- [x] Initial development <-- We are here
+- [ ] Minimum viable product
+- [ ] Alpha release
+- [ ] Feature-complete release
 
 ## Installation
 
