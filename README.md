@@ -1,8 +1,8 @@
 <!-- markdownlint-disable MD041 -->
 
-[![GitHub](https://img.shields.io/github/license/AdrianDAlessandro/rse-competencies-toolkit-webapp)](https://raw.githubusercontent.com/AdrianDAlessandro/rse-competencies-toolkit-webapp/main/LICENSE)
-[![Test and build](https://github.com/AdrianDAlessandro/rse-competencies-toolkit-webapp/actions/workflows/ci.yml/badge.svg)](https://github.com/AdrianDAlessandro/rse-competencies-toolkit-webapp/actions/workflows/ci.yml)
-[![codecov](https://codecov.io/gh/AdrianDAlessandro/rse-competencies-toolkit-webapp/graph/badge.svg?token=56K64XN243)](https://codecov.io/gh/AdrianDAlessandro/rse-competencies-toolkit-webapp)
+[![GitHub](https://img.shields.io/github/license/direct-framework/direct-webapp)](https://raw.githubusercontent.com/direct-framework/direct-webapp/main/LICENSE)
+[![Test and build](https://github.com/direct-framework/direct-webapp/actions/workflows/ci.yml/badge.svg)](https://github.com/direct-framework/direct-webapp/actions/workflows/ci.yml)
+[![codecov](https://codecov.io/gh/direct-framework/direct-webapp/graph/badge.svg?token=56K64XN243)](https://codecov.io/gh/direct-framework/direct-webapp)
 
 # DIRECT Framework Webapp
 
